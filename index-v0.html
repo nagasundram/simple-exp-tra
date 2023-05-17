@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="flex-container">
+    <div class="content-container">
+      <div class="form-container">
+        <form action="handleSubmit($event)" id="trackForm">
+          <h1 id="demo">Expense</h1>
+          <br />
+          <br />
+          <input type="number" name="amount" value="" placeholder="Amount" />
+          <br />
+          <div class="radio-button">
+            <input type="radio" id="cash" name="source" value="Cash" />
+            <label class="subtitle" for="cash">Cash</label>
+            <input type="radio" id="hdfc" name="source" value="HDFC" />
+            <label class="subtitle" for="hdfc">HDFC</label>
+            <input type="radio" id="icici" name="source" value="ICICI" />
+            <label class="subtitle" for="icici">ICICI</label>
+            <input type="radio" id="one" name="source" value="HDFC Credit" />
+            <label class="subtitle" for="one">One</label>
+            <input type="radio" id="amazonpay" name="source" value="ICICI Credit" />
+            <label class="subtitle" for="amazonpay">Amazon</label>
+            <input type="radio" id="zeta" name="source" value="Zeta" />
+            <label class="subtitle" for="zeta">Zeta</label>
+            <input type="radio" id="canara" name="source" value="Paytm" />
+            <label class="subtitle" for="canara">Canara</label>
+          </div>
+          <br />
+          <div class="radio-button">
+            <input type="radio" id="food" name="category" value="Food" />
+            <label class="subtitle" for="food">Food</label>
+            <input type="radio" id="shopping" name="category" value="Shopping" />
+            <label class="subtitle" for="shopping">Shopping</label>
+            <input type="radio" id="travel" name="category" value="Travel" />
+            <label class="subtitle" for="travel">Travel</label>
+            <input type="radio" id="entertainment" name="category" value="Entertainment" />
+            <label class="subtitle" for="entertainment">Entertainment</label>
+            <input type="radio" id="payments" name="category" value="Payments" />
+            <label class="subtitle" for="payments">Payments</label>
+            <input type="radio" id="medical" name="category" value="Medical" />
+            <label class="subtitle" for="medical">Medical</label>
+            <input type="radio" id="transaction" name="category" value="Transactions" />
+            <label class="subtitle" for="transaction">Transactions</label>
+            <input type="radio" id="misc" name="category" value="Misc." />
+            <label class="subtitle" for="misc">Misc</label>
+          </div>
+          <br />
+          <select id="subCatSelect" name="subCat" placeholder="sun">
+            <!-- <option value="">Sub Category</option> -->
+          </select>
+          <input type="text" name="subCatMisc" value="" id="subCatMisc" placeholder="Sub Category"
+            style="display: none;" />
+          <br />
+          <input type="text" name="comments" value="" placeholder="Comments" />
+          <br />
+          <input type="submit" value="ADD" class="submit-btn" id="submitBtn" />
+          <span class="subtitle" id="result"></span>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>

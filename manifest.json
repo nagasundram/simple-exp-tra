@@ -1,0 +1,11 @@
+{
+  "name": "₹ Exp Tracker",
+  "version": "1.0.0",
+  "description": "₹ Expense Tracking",
+  "manifest_version": 3,
+  "author": "Nagasundaram",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Expenses"
+  }
+}
