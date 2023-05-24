@@ -91,7 +91,6 @@ function handleSubmit(e) {
   const formData = new FormData(e.target);
   const formProps = Object.fromEntries(formData);
   let result = document.getElementById("result");
-  console.log(formProps);
   if (
     formProps.amount &&
     formProps.source &&
@@ -115,6 +114,29 @@ function handleSubmit(e) {
         submitBtn.disable = "true";
       }
     };
+    let emojis = {
+      'egg': '🥚',
+      'mango': '🥭',
+      'corn': '🌽',
+      'pumpkin': '🎃',
+      'coconut': '🥥',
+      'carrot': '🥕',
+      'lemon': '🍋',
+      'banana': '🍌',
+      'rice': '🌾',
+      'wheat': '🌾',
+      'burger': '🍔',
+      'fries': '🍟'
+    }
+    let convertedCommentsArr = [];
+    formProps.comments.split(',').forEach(word => {
+      convertedWordArr = [];
+      word.split(' ').forEach(tag => {
+        convertedWordArr.push(emojis[tag.toLowerCase()] || tag)
+      });
+      convertedCommentsArr.push(convertedWordArr.join(' '))
+    });
+    let convertedComments = convertedCommentsArr.join(',');
     let row = "row=";
     row += formProps.subCat || formProps.subCatMisc;
     row += "|||";
@@ -124,7 +146,7 @@ function handleSubmit(e) {
     row += "|||";
     row += formProps.category;
     row += "|||";
-    row += formProps.comments;
+    row += convertedComments;
     row += "|||||||||create||||||";
     row += new Date()
       .toLocaleString("en-IN", {
